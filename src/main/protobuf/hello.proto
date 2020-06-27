@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "codes.showme.demo.springboot2micrometer";
+option java_outer_classname = "OuterSample";
+option java_multiple_files = true;
+
+
+message HelloRequest {
+    string foo = 1;
+}
+
+message HelloReply {
+    int32 blah = 1;
+}
+service Greeter {
+    rpc SayHello ( HelloRequest) returns (  HelloReply) {}
+}
