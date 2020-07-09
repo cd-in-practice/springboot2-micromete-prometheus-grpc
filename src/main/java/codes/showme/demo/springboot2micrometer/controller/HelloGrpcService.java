@@ -6,11 +6,13 @@ import codes.showme.demo.springboot2micrometer.HelloRequest;
 import io.grpc.stub.StreamObserver;
 import org.lognet.springboot.grpc.GRpcService;
 
+import java.util.Random;
+
 @GRpcService
 public class HelloGrpcService extends GreeterGrpc.GreeterImplBase {
     @Override
     public void sayHello(HelloRequest request, StreamObserver<HelloReply> responseObserver) {
-        final HelloReply.Builder replyBuilder = HelloReply.newBuilder().setBlah(2);
+        final HelloReply.Builder replyBuilder = HelloReply.newBuilder().setBlah(0);
         responseObserver.onNext(replyBuilder.build());
         responseObserver.onCompleted();
     }
