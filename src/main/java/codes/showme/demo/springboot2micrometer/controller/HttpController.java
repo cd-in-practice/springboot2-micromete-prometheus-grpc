@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/demo")
-//@Timed
+@Timed()
 public class HttpController {
 
     @GetMapping("/hello")
