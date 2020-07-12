@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option java_package = "codes.showme.demo.springboot2micrometer";
+option java_outer_classname = "OuterSample";
+option java_multiple_files = true;
+
+service Foo {
+  rpc SayHello (FooReq) returns (FooResp) {}
+}
+
+service Bar {
+  rpc SayBye (BarReq) returns (BarResp) {}
+}
+
+message FooReq {
+  string foo = 1;
+}
+
+message FooResp {
+  int32 blah = 1;
+}
+
+
+message BarReq {
+  string foo = 1;
+}
+
+message BarResp {
+  int32 blah = 1;
+}
